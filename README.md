@@ -27,7 +27,7 @@ uv run pytest -q && uv run ruff check .
 
 # Web  (http://localhost:3000)
 cd web && npm ci && npm run dev
-npm test && npm run lint && npx tsc --noEmit && npm run build
+npm test && npm run lint && npm run typecheck && npm run build
 ```
 
 Configuration (env vars, prefix `COMPOSER_`): `DATABASE_URL`, `STORAGE_DIR`, `MAX_UPLOAD_BYTES`, `CORS_ORIGINS`.
