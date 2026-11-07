@@ -13,7 +13,7 @@ or the real browser; unit tests alone are listed separately.
 | Audio streaming with HTTP Range | Verified | Live: 200 full body, 206 for `Range`; CORS preflight 200 |
 | Web: project dashboard, project page, upload, recorder, waveform + playback | **Built, NOT verified in a browser** | `tsc`, eslint, `next build` pass; 4 unit tests cover peak computation and mime helpers only. The browser tool available here cannot open localhost, and microphone capture cannot be exercised headlessly |
 | Browser recording (MediaRecorder) | Unverified | needs a manual test in Chrome and Safari |
-| CI | api job green on GitHub; web job failed on first run (typecheck needed `next typegen`), fixed locally, re-run pending | `.github/workflows/ci.yml` |
+| CI | Verified: api and web jobs green on GitHub after fixing typecheck (`next typegen`) | `.github/workflows/ci.yml` |
 
 ### Known gaps / limitations
 - Test audio so far is a synthesized sine melody with vibrato, not a real human voice.
@@ -24,7 +24,7 @@ or the real browser; unit tests alone are listed separately.
 
 ### Exit criteria for Phase 1
 1. Manual browser check passes: create song, record in Chrome, upload a WAV, waveform renders, playback and click-to-seek work.
-2. CI green on GitHub.
+2. ~~CI green on GitHub~~ done.
 Only then start Phase 2.
 
 ## Not started
